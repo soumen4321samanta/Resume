@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<main class="container mt-5">
+    <section id="contact">
+        <h2 class="text-warning mb-3 border-bottom mx-2">Get in Touch</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- This renders the form with all fields and labels -->
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+    </section>
+</main>
+
+{% endblock %}

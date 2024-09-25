@@ -1,0 +1,31 @@
+{% load static %}
+<div class="border-right border-warning h-100 bg-light-custom">
+    <div class="text-center">
+        <img src="{% static 'core/images/Soumen1.jpg' %}" alt="" class="img-fluid rounded-circle mt-5" width="90px">
+        <h5 class="mt-3 text-white">Soumen Samanta</h5>
+    </div>
+
+    <hr class="border-secondary">
+    <nav class="nav flex-column text-center mx-3">
+        <a href="{% url 'home' %}" class="nav-link btn btn-warning text-white px-5 mt-3 hover-bg-custom">Home</a><br>
+        <a href="{% url 'services' %}" class="nav-link btn btn-warning text-white hover-bg-custom">Services</a><br>
+        <a href="{% url 'education' %}" class="nav-link btn btn-warning text-white hover-bg-custom">Skill</a><br>
+        <a href="{% url 'cont' %}" class="nav-link btn btn-warning text-white hover-bg-custom">Contact</a><br>
+    </nav>
+</div>
+
+<!-- Add this CSS -->
+<style>
+    .bg-light-custom {
+        background-color: #495057; /* Custom light background color */
+    }
+
+    .hover-bg-custom {
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    }
+
+    .hover-bg-custom:hover {
+        background-color: #f57c00; /* Custom hover color */
+        transform: scale(1.05); /* Slightly enlarge the button */
+    }
+</style>
